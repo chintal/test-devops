@@ -31,4 +31,4 @@ RUN python3 populate.py
 EXPOSE 8080
 
 # Command to run on start
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "3", "chintal.app:app"]
+CMD ["start.sh"]
