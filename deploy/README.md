@@ -7,9 +7,9 @@ Deployment Instructions
 Solution Overview
 -----------------
 
-Application : Flask + Gunicorn behind Nginx
-Caching :     Redis
-Persistence : postgres via SQLAlchemy
+  - Application : Flask + Gunicorn behind Nginx
+  - Caching :     Redis
+  - Persistence : postgres via SQLAlchemy
 
 Postgres is included in the container and some data is dumped into it at
 compile time. For proper persistence, this should be redirected to a better
@@ -28,6 +28,23 @@ something else, the following environment variables are available :
   - CACHE_REDIS_HOST
   - CACHE_REDIS_PORT
   - CACHE_REDIS_PASSWORD
+
+
+API Endpoints
+-------------
+
+Endpoints for list of all something. These probably should be paginated
+instead.
+
+  - /cases : List all Cases 
+  - /persons : List of all Persons
+  - /attorneys : List of all Attorneys 
+
+Endpoints to get a specific item by ID: 
+
+  - /cases/<id> : Get a specific Case by ID 
+  - /persons/<id> : Get a specific Person by ID
+  - /attorneys/<id> : Get a specific Attorney by ID 
 
 
 About the Models
