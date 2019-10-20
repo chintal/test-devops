@@ -16,19 +16,18 @@ compile time. For proper persistence, this should be redirected to a better
 postgres deployment that is non-volatile across docker deployments. That can 
 be done by providing the following environment variables :
 
-  - DATABASE_HOST
-  - DATABASE_PORT
-  - DATABASE_USER
-  - DATABASE_PASS
-  - DATABASE_DB
+  - `DATABASE_HOST`
+  - `DATABASE_PORT`
+  - `DATABASE_USER`
+  - `DATABASE_PASS`
+  - `DATABASE_DB`
 
 Redis is included in the container and should be fine. If you want to use 
 something else, the following environment variables are available :
 
-  - CACHE_REDIS_HOST
-  - CACHE_REDIS_PORT
-  - CACHE_REDIS_PASSWORD
-
+  - `CACHE_REDIS_HOST`
+  - `CACHE_REDIS_PORT`
+  - `CACHE_REDIS_PASSWORD`
 
 API Endpoints
 -------------
@@ -36,15 +35,15 @@ API Endpoints
 Endpoints for list of all something. These probably should be paginated
 instead.
 
-  - /cases : List all Cases 
-  - /persons : List of all Persons
-  - /attorneys : List of all Attorneys 
+  - `/cases` : List all Cases 
+  - `/persons` : List of all Persons
+  - `/attorneys` : List of all Attorneys 
 
 Endpoints to get a specific item by ID: 
 
-  - /cases/<id> : Get a specific Case by ID 
-  - /persons/<id> : Get a specific Person by ID
-  - /attorneys/<id> : Get a specific Attorney by ID 
+  - `/cases/<id>` : Get a specific Case by ID 
+  - `/persons/<id>` : Get a specific Person by ID
+  - `/attorneys/<id>` : Get a specific Attorney by ID 
 
 
 About the Models
@@ -86,5 +85,4 @@ Additional Notes
   - None of the solution is meaningfully documented.
   - Nothing is really tested. The pipeline only runs a test hook, 
     not real tests.
-  
   
