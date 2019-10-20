@@ -3,6 +3,8 @@
 Deployment Instructions
 -----------------------
 
+docker-compose up should do it.
+The API should be listening on port 1079.
 
 Solution Overview
 -----------------
@@ -83,6 +85,5 @@ Additional Notes
 ----------------
 
   - None of the solution is meaningfully documented.
-  - Nothing is really tested. The pipeline only runs a test hook, 
-    not real tests.
+  - There's no CI/CD implemented on this.
   
