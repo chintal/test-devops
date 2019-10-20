@@ -86,3 +86,4 @@ def commit_metadata():
 
 
 metadata = get_metadata()
+commit_metadata()

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx/
+    container_name: legalist-test-devops-chintal-nginx
+    ports:
+      - "80:80"
+    links:
+      - app:legalist-test-devops-chintal-app
+  app:
+    build: ./app/
+    container_name: legalist-test-devops-chintal-nginx
+    expose:
+      - "8080"
+    links:
+      - redis:legalist-test-devops-chintal-redis
+      - postgres:legalist-test-devops-chintal-postgres
+  redis:
+    build: ./redis/
+    container_name: legalist-test-devops-chintal-redis
+    expose:
+      - "6379"
+  postgres:
+    build: ./postgres/
+    container_name: legalist-test-devops-chintal-postgres
+    expose:
+      - "5432"

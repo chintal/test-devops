@@ -8,20 +8,19 @@ from setuptools import setup, find_packages
 
 
 install_requires = [
-    'six',
-    'wheel',
-    'setuptools_scm',
     'psycopg2-binary',
     'SQLAlchemy',
     'Flask',
     'Flask-RESTful',
     'Flask-Caching',
+    'redis',
+    'gunicorn',
 ]
 
 
 setup(
     name='legalist-chintal',
-    use_scm_version={"root": ".", "relative_to": __file__},
+    version='1.0.0',
     author="Chintalagiri Shashank",
     author_email="shashank.chintalagiri@gmail.in",
     description="legalist devops test",

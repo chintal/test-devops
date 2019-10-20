@@ -7,7 +7,6 @@ from flask_restful import Resource
 from flask_restful import Api
 from flask_restful import abort
 from flask_restful import marshal_with
-from flask_restful.fields import Raw
 from flask_caching import Cache
 from sqlalchemy.orm.exc import NoResultFound
 
@@ -22,7 +21,7 @@ from .marshallers import attorney_marshaller
 from .marshallers import case_marshaller
 
 config = {
-    'CACHE_TYPE': 'null',  # 'redis',
+    'CACHE_TYPE': 'redis',
     'CACHE_DEFAULT_TIMEOUT': 600,
     # 'CACHE_OPTIONS': None,
     'CACHE_REDIS_HOST': os.environ.get('CACHE_REDIS_HOST', '127.0.0.1'),
@@ -42,7 +41,6 @@ class AllItems(Resource):
 
     @with_db
     def get(self, session=None):
-        print("Returning All from ", self.__class__.__name__)
         return get_all(item_type=self._item_class, session=session)
 
 
@@ -86,7 +84,6 @@ class GetItem(Resource):
 
     @with_db
     def get(self, item_id=None, session=None):
-        print("Returning {0} from ".format(item_id), self.__class__.__name__)
         try:
             return get_item(item_type=self._item_class, item_id=item_id, session=session)
         except NoResultFound:

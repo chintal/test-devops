@@ -1,0 +1,7 @@
+psycopg2-binary
+SQLAlchemy
+Flask
+Flask-RESTful
+Flask-Caching
+gunicorn
+redis
