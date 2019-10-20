@@ -25,6 +25,8 @@ ENV DATABASE_USER 'legalist'
 ENV DATABASE_PASS 'legalist'
 ENV DATABASE_DB 'legalist'
 
+RUN python3 populate.py
+
 # Expose port
 EXPOSE 8080
 

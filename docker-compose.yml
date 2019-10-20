@@ -4,7 +4,7 @@ services:
     build: ./nginx/
     container_name: legalist-test-devops-chintal-nginx
     ports:
-      - "80:80"
+      - "1079:80"
     links:
       - app:legalist-test-devops-chintal-app
   app:
