@@ -65,7 +65,7 @@ assumptions made :
   - Attorneys are assumed to be in the bar of only a single state.
   
 There remain the following potential issues that should ideally be fixed :
-  
+
   - "A person cannot be plaintiff and defendant on the same case" is not 
     addressed. At all. It is currently assumed whatever code puts the data 
     into the database will do some kind of validation. I'm sure a way to 

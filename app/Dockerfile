@@ -25,10 +25,8 @@ ENV DATABASE_USER 'legalist'
 ENV DATABASE_PASS 'legalist'
 ENV DATABASE_DB 'legalist'
 
-RUN python3 populate.py
-
 # Expose port
 EXPOSE 8080
 
 # Command to run on start
-CMD ["start.sh"]
+CMD ["/usr/src/app/start.sh"]

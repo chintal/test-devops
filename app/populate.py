@@ -7,6 +7,7 @@ import random
 
 from sqlalchemy.orm.exc import NoResultFound
 
+from chintal.db import clear_database
 from chintal.db import commit_metadata
 from chintal.db import with_db
 from chintal.models import Person
@@ -146,12 +147,14 @@ def generate_cases(session=None):
             plaintiff=plaintiff,
             defendant=defendant,
         )
+        # print("CASE", title)
         session.add(case)
         session.commit()
         session.flush()
 
 
 if __name__ == '__main__':
+    clear_database()
     commit_metadata()
     generate_states()
     states = _get_states()

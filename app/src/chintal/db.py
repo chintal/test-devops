@@ -81,9 +81,12 @@ def get_metadata():
     return DeclBase.metadata
 
 
+def clear_database():
+    metadata.drop_all(engine)
+
+
 def commit_metadata():
     metadata.create_all(engine)
 
 
 metadata = get_metadata()
-commit_metadata()
