@@ -47,7 +47,7 @@ def get_session():
     try:
         yield session
         session.commit()
-    except:
+    except:  # noqa
         session.rollback()
         raise
     finally:
@@ -77,7 +77,7 @@ class BaseMixin(object):
 
 
 def get_metadata():
-    from . import models
+    from . import models  # noqa
     return DeclBase.metadata
 
 

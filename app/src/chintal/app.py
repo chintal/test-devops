@@ -85,7 +85,8 @@ class GetItem(Resource):
     @with_db
     def get(self, item_id=None, session=None):
         try:
-            return get_item(item_type=self._item_class, item_id=item_id, session=session)
+            return get_item(item_type=self._item_class,
+                            item_id=item_id, session=session)
         except NoResultFound:
             abort(404, message="{0} with id {1} not found"
                                "".format(self._item_class.__name__, item_id))

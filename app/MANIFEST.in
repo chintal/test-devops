@@ -1,0 +1,12 @@
+include CHANGELOG.rst
+include AUTHORS.rst
+include LICENSE
+include README.rst
+include docs/*.rst
+include docs/Makefile
+include docs/_static/*
+include docs/_templates/*.html
+imclude sample_data/*.csv
+include start.sh
+include Dockerfile
+include populate.py
