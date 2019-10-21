@@ -49,7 +49,7 @@ setup(
     author_email="shashank.chintalagiri@gmail.in",
     description="legalist devops test",
     long_description='\n'.join([read('README.rst'), read('CHANGELOG.rst')]),
-    url='https://github.com/chintal/test-devops-legalist',
+    url='https://github.com/chintal/test-devops',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     classifiers=[

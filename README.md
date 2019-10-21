@@ -6,6 +6,9 @@ Deployment Instructions
 docker-compose up should do it.
 The API should be listening on port 1079.
 
+The code should be available for the next couple of weeks on 
+https://github.com/chintal/test-devops
+
 Solution Overview
 -----------------
 
