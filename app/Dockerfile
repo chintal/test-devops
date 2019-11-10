@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-python3
+FROM python:3.7-alpine
 
 WORKDIR /usr/src/app
 
@@ -7,8 +7,8 @@ COPY requirements.txt .
 RUN \
  apk add postgresql-libs && \
  apk add --virtual .build-deps gcc musl-dev postgresql-dev python3-dev && \
- python3 -m pip install -r requirements.txt --no-cache-dir && \
- apk --purge del .build-deps
+ python3 -m pip install -r requirements.txt --no-cache-dir
+# apk --purge del .build-deps
 
 # Copy and Install application
 COPY .  .
